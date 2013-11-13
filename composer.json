@@ -1,0 +1,17 @@
+{
+  "name": "morozov/bootstrap",
+  "description": "Command line application bootstrap component",
+  "authors": [
+    {
+      "name": "Sergei Morozov",
+      "email": "morozov@tut.by"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "files": ["src/bootstrap.php"]
+  }
+}
