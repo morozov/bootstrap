@@ -8,7 +8,7 @@
  * @category  Bootstrap
  * @package   Bootstrap
  * @author    Sergei Morozov <morozov@tut.by>
- * @copyright 2013 Sergei Morozov
+ * @copyright 2017 Sergei Morozov
  * @license   http://mit-license.org/ MIT Licence
  * @link      http://github.com/morozov/bootstrap
  */
@@ -21,7 +21,8 @@ set_error_handler(
 );
 
 set_exception_handler(
-    function (Exception $e) {
+    /** @param Exception|Throwable $e */
+    function ($e) {
         fwrite(STDERR, $e->getMessage() . PHP_EOL);
         exit(-1);
     }
