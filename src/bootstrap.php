@@ -16,6 +16,10 @@ error_reporting(-1);
 
 set_error_handler(
     function ($errNo, $errStr, $errFile, $errLine) {
+        if (!(error_reporting() & $errNo)) {
+            return false;
+        }
+
         throw new ErrorException($errStr, $errNo, 0, $errFile, $errLine);
     }
 );
