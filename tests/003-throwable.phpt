@@ -15,5 +15,5 @@ require __DIR__ . '/../src/bootstrap.php';
 
 undefined_function();
 ?>
---EXPECT--
-Call to undefined function undefined_function()
+--EXPECTF--
+Call to undefined function undefined_function() in %s/tests/003-throwable.php:5

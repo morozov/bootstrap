@@ -27,7 +27,12 @@ set_error_handler(
 set_exception_handler(
     /** @param Exception|Throwable $e */
     function ($e) {
-        fwrite(STDERR, $e->getMessage() . PHP_EOL);
+        fwrite(STDERR, sprintf(
+            '%s in %s:%d',
+            $e->getMessage(),
+            $e->getFile(),
+            $e->getLine()
+        ) . PHP_EOL);
         exit(-1);
     }
 );

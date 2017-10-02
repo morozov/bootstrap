@@ -1,1 +1,8 @@
+composer.lock
+run-tests.log
+tests/*.diff
+tests/*.exp
+tests/*.log
+tests/*.out
+tests/*.php
 vendor
