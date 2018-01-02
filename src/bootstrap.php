@@ -16,7 +16,7 @@ error_reporting(-1);
 
 set_error_handler(
     function ($errNo, $errStr, $errFile, $errLine) {
-        if (!(error_reporting() & $errNo)) {
+        if (!(error_reporting() & ~E_DEPRECATED & ~E_USER_DEPRECATED & $errNo)) {
             return false;
         }
 
